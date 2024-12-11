@@ -1,0 +1,963 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - BizLand Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+
+  <style>
+
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8); /* Yumuşak beyaz arka plan */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Diğer içeriklerin önünde görünmesini sağlarız */
+      transition: opacity 1s ease; /* Opaklık geçişi, 1 saniyede kaybolacak */
+  }
+  
+  /* Logo animasyonu */
+  .loading-logo {
+      width: 600px; /* Logonun boyutunu ayarlayabilirsiniz */
+      animation: breathe 3s ease-in-out infinite; /* Nefes alma animasyonunun süresi 5 saniye */
+  }
+  
+  /* Nefes alma animasyonu */
+  @keyframes breathe {
+      0% {
+          transform: scale(1); /* Normal boyut */
+      }
+      50% {
+          transform: scale(1.1); /* Nefes alırken biraz büyüme */
+      }
+      100% {
+          transform: scale(1); /* Sonra eski boyutuna dönme */
+      }
+  }
+
+
+  @media (max-width: 767px) {
+    .loading-logo {
+      width: 60%; /* Mobilde logoyu küçült (yüzde değeri ile daha esnek olur) */
+      max-width: 200px; /* Maksimum genişlik sınırı */
+    }
+  
+    .loading-screen {
+      background-color: rgba(255, 255, 255, 0.9); /* Mobilde arka planı biraz daha opak yap */
+    }
+  }
+
+
+  #language-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+#language-select {
+    background-color: #f8f9fa; /* Hafif gri arka plan */
+    border: 1px solid #ced4da; /* Nötr gri kenarlık */
+    border-radius: 6px; /* Hafif yuvarlak kenarlar */
+    padding: 8px 12px; /* Orta boy padding */
+    font-size: 14px; /* Orta boy yazı */
+    font-weight: 500; /* Hafif kalın yazı */
+    color: #495057; /* Nötr koyu gri yazı rengi */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease; /* Geçiş efekti */
+    appearance: none; /* Varsayılan tarayıcı stilini kaldır */
+    -webkit-appearance: none; /* Safari uyumu */
+    -moz-appearance: none; /* Firefox uyumu */
+}
+
+#language-select:hover {
+    background-color: #e9ecef; /* Hoverda daha açık gri */
+    border-color: #b5bcc1; /* Kenarlık biraz daha koyulaşır */
+}
+
+#language-select:focus {
+    border-color: #868e96; /* Focus durumunda daha koyu gri kenarlık */
+    box-shadow: 0 0 4px rgba(134, 142, 150, 0.4); /* Şık ve sade bir parlama */
+}
+
+option {
+    font-size: 14px; /* Hafif küçültülmüş yazı */
+    font-weight: 400; /* Normal ağırlık */
+    color: #495057; /* Klasik koyu gri */
+    background-color: #ffffff; /* Beyaz arka plan */
+    padding: 5px 10px; /* Hafif padding */
+    cursor: pointer;
+}
+
+
+  /* Konteynerin genişliği ve konumu */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+/* Butonun stili */
+.dropdown-button {
+    background-color: #007bff; /* Mavi arka plan */
+    color: white;               /* Yazı rengi */
+    padding: 8px 16px;          /* İç boşluk */
+    font-size: 14px;            /* Yazı boyutu */
+    border: 2px solid #007bff; /* Kenarlık */
+    border-radius: 4px;        /* Yuvarlatılmış köşeler */
+    cursor: pointer;           /* Fareyi üzerine getirdiğinde pointer (el) simgesi */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+    background-color: #0056b3;  /* Hover durumunda mavi daha koyu olur */
+    border-color: #0056b3;
+}
+
+/* Dropdown listesinin stili */
+.dropdown-list {
+    display: none;              /* Başlangıçta görünmez */
+    position: absolute;
+    top: 100%;                   /* Butonun hemen altına yerleştir */
+    left: 0;
+    list-style-type: none;       /* Noktalı listeyi kaldır */
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;  /* Açılır menü arka plan rengi */
+    border: 1px solid #ccc;     /* Açılır menü kenarlığı */
+    border-radius: 4px;         /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    z-index: 10;                /* Diğer öğelerden üstte görünmesini sağlar */
+}
+
+/* Liste öğelerinin stili */
+.dropdown-list li {
+    padding: 8px 10px;         /* İç boşluk */
+}
+
+.dropdown-list li:hover {
+    background-color: #007bff; /* Hover durumunda arka plan rengi */
+    color: white;               /* Yazı rengi beyaz olur */
+}
+
+.dropdown-list li a {
+    text-decoration: none;      /* Bağlantı altını kaldır */
+    color: inherit;             /* Renk mirası */
+    display: block;             /* Bağlantı tüm öğe boyunca tıklanabilir olur */
+}
+
+/* Butona tıklanıldığında dropdown menüsünü gösterme */
+.dropdown-container.active .dropdown-list {
+    display: block; /* Seçenekler görünür olur */
+}
+
+
+@media (max-width: 767px) {
+  .hero-photo img {
+    max-width: 60%;     /* Mobilde genişliği küçült */
+    height: auto;       /* Yükseklik oranını koru */
+  }
+}
+
+
+
+.social-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px; /* İkonlar arası boşluk */
+  color: #fff; /* İkon rengi */
+  background-color: #3498db; /* Arka plan rengi */
+  border-radius: 50%; /* Yuvarlak ikonlar */
+  font-size: 18px; /* İkon boyutu */
+  transition: transform 0.3s, background-color 0.3s; /* Geçiş efektleri */
+}
+
+/* Hover Efekti */
+.social-links a:hover {
+  background-color: #2c3e50; /* Hover'da arka plan rengi */
+  transform: scale(1.1); /* İkonu hafifçe büyütme */
+}
+
+/* Başlık Stil */
+h4.text-center {
+  font-size: 22px;
+  color: #2c3e50; /* Başlık rengi */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Sosyal Medya Alanı Konumu */
+.col-lg-3.col-md-12 {
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+.footer-links h4 {
+  font-size: 22px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Başlık Alt Çizgi Efekti */
+.footer-links h4::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #3498db;
+  transform: translateX(-50%);
+}
+
+/* Bağlantı Listesi */
+.footer-links ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Bağlantı Öğeleri */
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+/* Bağlantı Stili */
+.footer-links ul li a {
+  color: #34495e;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* İkon ve Bağlantı Arasındaki Boşluk */
+.footer-links ul li i {
+  color: #3498db;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* Hover Efekti */
+.footer-links ul li a:hover {
+  color: #3498db;
+  transform: translateX(5px); /* Bağlantı sağa kayar */
+}
+
+
+
+.footer-contact {
+  padding: 20px 0;
+  color: #2c3e50; /* Koyu gri metin rengi */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* İletişim Öğeleri */
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+/* Hover Efekti */
+.footer-contact p:hover {
+  transform: translateX(5px); /* Hover durumunda sola kaydırma */
+}
+
+/* Kalın Başlıklar */
+.footer-contact p strong {
+  font-weight: 600;
+  color: #34495e;
+  margin-right: 8px;
+}
+
+/* Metin Renkleri */
+.footer-contact p span {
+  color: #2980b9; /* Mavi renk tonu */
+  transition: color 0.3s;
+}
+
+/* Hover Efekti ile Renk Değişimi */
+.footer-contact p span:hover {
+  color: #1c6691; /* Daha koyu mavi tonu */
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 576px) {
+  .footer-contact {
+    font-size: 14px;
+  }
+
+  .footer-contact p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-contact p strong {
+    margin-bottom: 5px;
+  }
+}
+
+
+
+
+
+
+/* Mobil cihazlar için yazıyı uyarlamak */
+@media (max-width: 768px) {
+  #hero-photo h1 {
+    font-size: 24px;  /* Yazıyı mobilde daha küçük yap */
+    top: 100px; /* Üstten mesafeyi küçült */
+    left: 20px; /* Sol mesafeyi küçült */
+    text-align: center; /* Yazıyı ortala */
+    width: 100%;  /* Yazının genişliğini ayarla */
+    position: absolute; /* Yazıyı pozisyonla */
+  }
+}
+
+/* Yazının büyük ekranlarda daha iyi görünmesi için ek ayarlar */
+@media (min-width: 769px) {
+  #hero-photo h1 {
+    font-size: 40px; /* Daha büyük yazı boyutu */
+    top: 170px;
+    left: 500px; /* Geniş ekranda sola doğru hizalama */
+  }
+}
+
+
+
+
+
+  
+</style>
+
+  <!-- =======================================================
+  * Template Name: BizLand
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <div class="loading-screen">
+    <img src="{% static 'assets/img/logo.png' %}" alt="Logo" class="loading-logo">
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // === Yükleme Ekranını Kaldır ===
+    const loadingScreen = document.querySelector('.loading-screen');
+    if (loadingScreen) {
+      setTimeout(function() {
+        loadingScreen.style.opacity = '0'; // Yavaşça kaybolmasını sağla
+        setTimeout(function() {
+          loadingScreen.style.display = 'none'; // Tamamen gizle
+        }, 1000); // 1 saniye sonra
+      }, 1500); // 1.5 saniye sonra yükleme ekranını kayboltur
+    }
+
+    // === Hero Fotoğrafını Görünür Yap ===
+    const heroPhoto = document.getElementById('hero-photo');
+    if (heroPhoto) {
+      heroPhoto.classList.add('visible'); // Hero fotoğrafını görünür hale getir
+    }
+
+    // === Sayfanın En Üstüne Kaydır ===
+    window.scrollTo(0, 0);
+
+    // === Dropdown Menüsünün Açılması ===
+    const btnSelector = document.getElementById('btn-selector');
+    if (btnSelector) {
+      btnSelector.addEventListener('click', function() {
+        const dropdown = document.getElementById('dropdown-options');
+        if (dropdown) {
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+          // Konteyneri aktif hale getir, böylece stil uygulanır
+          this.parentElement.classList.toggle('active');
+        }
+      });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // === FAQ Bölümlerinin Açılıp Kapanması ===
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // === Sayfa ve HTML için Taşmayı Önle ===
+    document.documentElement.style.cssText = 'margin: 0; padding: 0; width: 100%; overflow-x: hidden;';
+    document.body.style.cssText = 'margin: 0; padding: 0; width: 100%; overflow-x: hidden;';
+
+    // Tüm elemanların taşmasını önle
+    document.querySelectorAll('*').forEach((el) => {
+      el.style.maxWidth = '100%';
+      el.style.boxSizing = 'border-box';
+    });
+  });
+</script>
+
+
+
+</body>
+
+
+
+  <header id="header" class="header sticky-top">
+
+
+    <div class="branding d-flex align-items-center">
+      <div class="container position-relative d-flex align-items-center justify-content-between" style="margin-left: 40px;">
+        <a href="{% url 'info:index' %}" class="logo d-flex align-items-center">
+          <img src="{% static 'assets/img/logo.png' %}" alt=""> 
+        </a>
+    
+        <nav id="navmenu" class="navmenu" style="margin-right: 30px;">
+          <ul>
+            <li><a href="#hero" class="active">{% trans "Ana Səhifə" %}</a></li>
+            <li><a href="#about">{% trans "Haqqımızda" %}</a></li>
+            <li><a href="#services">{% trans "Xidmətlər" %}</a></li>
+            <li><a href="#portfolio">{% trans "Avadanlıqlar" %}</a></li>
+            <li><a href="#contact">{% trans "Əlaqə" %}</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+      <form id="language-form" action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <select name="language" id="language-select" onchange="document.getElementById('language-form').submit();">
+            <option value="az" {% if LANGUAGE_CODE == 'az' %}selected{% endif %}>AZ</option>
+            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>EN</option>
+            <option value="ru" {% if LANGUAGE_CODE == 'ru' %}selected{% endif %}>RU</option>
+        </select>
+    </form>
+    <div class="dropdown-container" style="margin-left: 15px; margin-right: 4px;">
+      <button id="btn-selector" class="dropdown-button">{% trans "GİRİŞ" %}</button>
+      <ul id="dropdown-options" class="dropdown-list">
+          {% for item in menu_items %}
+              <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+          {% endfor %}
+      </ul>
+  </div>
+    </div>
+    
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <div class="hero-photo" id="hero-photo" style="position: relative;">
+              <img src="{% static 'assets/img/logo.png' %}" alt="Logo" style="width: 100%; height: auto;">
+              <h1 style="margin: 0; white-space: nowrap; color: blue; position: absolute; top: 170px; left: 500px;">
+                {% trans "İgid-bələdçi" %}
+              </h1>
+            </div>
+                 
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+
+    <div class="container section-title" data-aos="fade-up" style="margin-top: 60px;">
+      <h2>{% trans "Haqqımızda" %}</h2>
+    </div><!-- End Section Title -->
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <!-- Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-3">
+
+       
+
+          <div class="d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-content ps-0 ps-lg-3">
+              <h3 style="color: blue; text-align: center; margin: 20px 0;">
+                {% trans "Biz kimik?" %}
+              </h3>
+              <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.6; letter-spacing: 0.5px;">
+                {% trans "'KaspianNavTel' şirkəti 2007-ci ildə yaradılmışdır. Azərbaycan Respublikasının müfəssəl elektron xəritəsi əsasında GPS naviqasiya sistemini, avtomonitorinq və peyk nəzarət sistemlərini ölkəmizdə tətbiq edən ilk yerli və milli şirkətdir. Şirkətimiz, geniş texnologiya və innovasiya sahələrində yüksək keyfiyyətli həllər təqdim edən aparıcı bir texnologiya şirkətidir. GPS naviqasiya cihazlarının satışı və montajından başlayaraq peyk, aero və dron xidmətlərinə qədər, coğrafi informasiya sistemləri (CİS) və xəritələşdirmə üzrə geodeziya, topoqrafiya, naviqasiya və batimetriya işlərini icra edirik. Bununla yanaşı, ağıllı həllər və rəqəmsal əkizlər, SCADA sistemləri və SCADA/CİS inteqrasiyası sahəsində fəaliyyət göstərərək müxtəlif sektorların rəqəmsal transformasiyasına dəstək oluruq. Süni intellekt və maşın öyrənməsi sahəsində qabaqcıl həllər təqdim edir, kibertəhlükəsizlik, robototexnika və avtomatlaşdırma ilə müştərilərimizin işlərini daha təhlükəsiz və səmərəli hala gətiririk. Şirkətimiz həmçinin artırılmış reallıq tətbiqləri, mobil tətbiqlər və informasiya portallarının yaradılması üzrə də ixtisaslaşmışdır. Plastik qabartma xəritələr, ərazi maketləri və dəniz-naviqasiya xəritələrinin hazırlanması sahəsində də innovativ həllər təqdim edirik. Geofizika və geologiya-kəşfiyyat işlərimizlə yanaşı, peşəkar təlimlər və texniki xidmətlə müştərilərimizə hərtərəfli dəstək təmin edirik." %}
+              </p>
+            </div>
+            
+          </div>
+         <ul class="custom-ul row list-unstyled"style="margin-left: 15px;">
+  <li class="col-md-6 mb-4">
+    <div>
+      <h4 class="text-primary" style="display: flex; align-items: center;">
+        <i class="fas fa-bullseye" style="margin-right: 10px;"></i>
+        {% trans "Misiyamız" %}
+      </h4>
+      <p>{% trans "Müştərilərimizə münasib qiymətə ən son texnologiya və müasir həllər ilə yüksək keyfiyyətli GPS naviqasiya, avtomonitorinq və peyk nəzarət sistemləri, xəritəçəkmə, informasiya və avtomatlaşdırma xidmətləri təqdim edərək onların əməliyyatlarını daha təhlükəsiz, effektiv və rəqəmsal idarə olunmasına dəstək olmaq." %}</p>
+    </div>
+  </li>
+  <li class="col-md-6 mb-4">
+    <div>
+      <h4 class="text-primary" style="display: flex; align-items: center; margin-top: 33px;">
+        <i class="fas fa-eye" style="margin-right: 10px;"></i>
+        {% trans "Vizyonumuz" %}
+      </h4> 
+      <p>{% trans "Milli və beynəlxalq miqyasda etibarlı bir həll təminatçısı olaraq, coğrafi informasiya texnologiyalarından süni intellektə qədər geniş bir xidmət çeşidi ilə qabaqcıl texnologiya və innovasiyanı tətbiq edən lider bir şirkət olmaq." %}</p>
+    </div>
+  </li>
+</ul>
+      
+          </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-car-front-fill"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="8000" data-purecounter-duration="1" class="purecounter"></span>
+              <p>{% trans "Qoşulmuş cihaz" %}</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-journal-richtext"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+              <p>{% trans "Layihələr" %}</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-file-earmark-check"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="350" data-purecounter-duration="1" class="purecounter"></span>
+              <p>{% trans "Müştərilər" %}</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-people"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1" class="purecounter"></span>
+              <p>{% trans "İşçi heyəti" %}</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>{% trans "Partnyorlar" %}</h2>
+  </div>
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+      
+      <div class="container">
+          <div class="swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                  {
+                      "loop": true,
+                      "speed": 600,
+                      "autoplay": {
+                          "delay": 5000
+                      },
+                      "slidesPerView": "auto",
+                      "pagination": {
+                          "el": ".swiper-pagination",
+                          "type": "bullets",
+                          "clickable": true
+                      },
+                      "breakpoints": {
+                          "320": {
+                              "slidesPerView": 2,
+                              "spaceBetween": 40
+                          },
+                          "480": {
+                              "slidesPerView": 3,
+                              "spaceBetween": 60
+                          },
+                          "640": {
+                              "slidesPerView": 4,
+                              "spaceBetween": 80
+                          },
+                          "992": {
+                              "slidesPerView": 6,
+                              "spaceBetween": 120
+                          }
+                      }
+                  }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                  {% for client in clients %}
+                  <div class="swiper-slide">
+                      <img src="{{ client.logo.url }}" class="img-fluid" 
+                           alt="{{ client.name }}"> <!-- Alt metin çevrilebilir -->
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+  </section><!-- /Clients Section -->
+
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+          <h2>{% trans "Xidmətlərimiz" %}</h2>
+      </div>
+  
+      <div class="container">
+        <div class="row gy-4">
+            {% for service in services %}
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="{{ service.icon_class }}"></i>
+                    </div>
+                    <!-- Servis detay sayfasına yönlendirecek link -->
+                      <a href="{% url 'info:service-detail' service.id %}" class="stretched-link">
+                        <h3>{{ service.title }}</h3>
+                    </a>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div><!-- End Service Item -->
+            {% endfor %}
+        </div>
+    </div>
+  </section><!-- /Services Section -->
+  
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>{% trans "Avadanlıqlar" %}</h2>
+      </div><!-- End Section Title -->
+   
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <!-- Portfolio Filters -->
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">{% trans "Hamısı" %}</li>  <!-- 'All' yerine 'Hamısı' -->
+            <li data-filter=".filter-2g">{% trans "2G Avadanlıqlar" %}</li>     <!-- 'App' yerine '2G Avadanlıqlar' -->
+            <li data-filter=".filter-4g">{% trans "4G Avadanlıqlar" %}</li>     <!-- 'Product' yerine '4G Avadanlıqlar' -->
+            <li data-filter=".filter-sensor">{% trans "Sensorlar" %}</li>       <!-- 'Branding' yerine 'Temperatur Sensoru' -->
+            <li data-filter=".filter-topography">{% trans "Topoqrafiya Avadanlıqları" %}</li>  <!-- Yeni kategori -->
+        </ul>
+   
+          <!-- Portfolio Container -->
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            {% for item in portfolio_items %}
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ item.category }}">
+              <img src="{{ item.image.url }}" class="img-fluid" alt="{{ item.title }}">
+              <div class="portfolio-info">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.description }}</p>
+                {% if item.detail_url %}
+                <a href="{{ item.detail_url }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                {% endif %}
+                <a href="{{ item.image.url }}" title="{{ item.title }}" data-gallery="portfolio-gallery-{{ item.category }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+            {% endfor %}
+          </div><!-- End Portfolio Container -->
+        </div>
+      </div>
+    </section><!-- /Portfolio Section -->
+
+ <!-- team.html -->
+
+
+
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+      <div class="container section-title">
+          <h2>{% trans "Tez-tez verilən suallar" %}</h2>
+      </div>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-10">
+                  <div class="faq-container">
+                      {% for faq in faqs %}
+                          <div class="faq-item">
+                              <h3>{{ faq.question }}</h3>
+                              <div class="faq-content">
+                                  <p>{{ faq.answer }}</p>
+                              </div>
+                              <i class="faq-toggle bi bi-chevron-right"></i>
+                          </div>
+                      {% endfor %}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>{% trans "Əlaqə" %}</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>{% trans "Ünvan" %}</h3>
+                  <p> Ələsgər Qayıbov küçəsi 12, məhəllə 1222
+                    Bakı,Azərbaycan</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>{% trans "Bizimlə Əlaqə" %}</h3>
+                  <p>+994 55 212 03 35</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>{% trans "E-Poçt" %}</h3>
+                  <p>info@caspiannavtel.az</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe
+              width="600"
+              height="450"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBw448XyidF5g1P-IGTyskJTV2B2-TTVyI&q=40.422365,49.8775895">
+            </iframe>
+                      </div>
+          </div>
+
+          <div class="col-lg-7">
+            <!-- Mesajları Göster -->
+            {% if messages %}
+                <div class="col-md-12">
+                    {% for message in messages %}
+                        <div class="alert alert-success">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            <form action="#contact" method="post" data-aos="fade-up" data-aos-delay="200">
+              {% csrf_token %}
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <label for="name-field" class="pb-2">{% trans "Adınız" %}</label>
+                        <input type="text" name="name" id="name-field" class="form-control" required="">
+                    </div>
+        
+                    <div class="col-md-6">
+                        <label for="email-field" class="pb-2">{% trans "E-Poçt" %}</label>
+                        <input type="email" class="form-control" name="email" id="email-field" required="">
+                    </div>
+        
+                    <div class="col-md-12">
+                        <label for="subject-field" class="pb-2">{% trans "Mövzu" %}</label>
+                        <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                    </div>
+        
+                    <div class="col-md-12">
+                        <label for="message-field" class="pb-2">{% trans "Mesajınız" %}</label>
+                        <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                    </div>
+        
+                    <div class="col-md-12 text-center">
+                        <div class="loading" style="display: none;">Loading...</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message" style="display: none;">Mesajınız uğurla gondərildi!</div>
+        
+                        <button type="submit" 
+                        style="background-color: #007bff; 
+                               color: white; 
+                               border: none; 
+                               border-radius: 5px; 
+                               padding: 12px 20px; 
+                               font-size: 16px; 
+                               cursor: pointer; 
+                               transition: background-color 0.3s, transform 0.2s;"
+                        onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='translateY(-2px)';" 
+                        onmouseout="this.style.backgroundColor='#007bff'; this.style.transform='translateY(0);'"
+                        onmousedown="this.style.transform='translateY(0);'" 
+                        onmouseup="this.style.transform='translateY(-2px)';">{% trans "Göndər" %}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+       
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer" style="background-color: #F8FDFF;">
+    <div class="container footer-top">
+      <div class="row gy-4 justify-content-between">
+  
+        <!-- Footer About Bölümü -->
+        <div class="col-lg-3 col-md-6 col-sm-12 footer-about">
+          <a href="{% url 'info:index' %}" class="logo d-flex align-items-center">
+            <img src="{% static 'assets/img/logo.png' %}" alt="">
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Ələsgər Qayıbov küçəsi 12, məhəllə 1222 Bakı, Azərbaycan</p>
+            <p class="mt-3"><strong>{% trans "Telefon:" %}</strong> <span>+994 12 525 52 11</span></p>
+            <p><strong>Mob:</strong> <span>+994 55 212 03 35</span></p>
+            <p class="mt-3"><strong>Email:</strong> <span>info@caspiannavtel.az</span></p>
+          </div>
+        </div>
+  
+        <!-- Faydalı Bağlantılar Bölümü -->
+        <div class="col-lg-3 col-md-3 col-sm-6 footer-links d-flex flex-column align-items-center justify-content-center">
+          <h4>{% trans "Faydalı Bağlantılar" %}</h4>
+          <ul class="list-unstyled text-center">
+            <li><i class="bi bi-caret-right-fill"></i><a href="#hero">{% trans "Ana səhifə" %}</a></li>
+            <li><i class="bi bi-caret-right-fill"></i><a href="#about">{% trans "Haqqımızda" %}</a></li>
+            <li><i class="bi bi-caret-right-fill"></i><a href="#services">{% trans "Xidmətlər" %}</a></li>
+            <li><i class="bi bi-caret-right-fill"></i><a href="#portfolio">{% trans "Avadanlıqlar" %}</a></li>
+            <li><i class="bi bi-caret-right-fill"></i><a href="#contact">{% trans "Əlaqə" %}</a></li>
+          </ul>
+        </div>
+  
+        <!-- Sosyal Medya ve İmza Bölümü -->
+        <div class="col-lg-3 col-md-12 d-flex flex-column align-items-center justify-content-center ms-3"style="margin-bottom: 27px;">
+          <!-- Başlık -->
+          <h4 class="text-center mb-3">{% trans "Bizi Takib Edin" %}</h4>
+        
+          <!-- Sosyal Medya İkonları -->
+          <div class="social-links d-flex justify-content-center mb-5">
+            <a href="#" class="me-2"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        
+          <!-- İmza Bölümü -->
+          <div class="text-center"style="margin-top: 20px;">
+            <h4 style="font-family: 'Helvetica Neue', sans-serif; font-size: 12px; font-weight: 500; color: #34495e; letter-spacing: 2px;">
+              {% trans "Taleh Qurbanov tərəfindən yaradılmışdır" %}
+              <span style="display: block; width: 60px; height: 2px; background-color: #3498db; margin: 10px auto 0;"></span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-11 16:27+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\info\templates\index.html:473 .\info\templates\service-detail.html:56
+msgid "Ana Səhifə"
+msgstr "Главная страница"
+
+#: .\info\templates\index.html:474 .\info\templates\index.html:525
+#: .\info\templates\index.html:904
+msgid "Haqqımızda"
+msgstr "О нас"
+
+#: .\info\templates\index.html:475 .\info\templates\index.html:905
+msgid "Xidmətlər"
+msgstr "Услуги"
+
+#: .\info\templates\index.html:476 .\info\templates\index.html:704
+#: .\info\templates\index.html:906
+msgid "Avadanlıqlar"
+msgstr "Оборудование"
+
+#: .\info\templates\index.html:477 .\info\templates\index.html:771
+#: .\info\templates\index.html:907
+msgid "Əlaqə"
+msgstr "Контакт"
+
+#: .\info\templates\index.html:491
+msgid "GİRİŞ"
+msgstr "ВХОД"
+
+#: .\info\templates\index.html:512
+msgid "İgid-bələdçi"
+msgstr "Игид-гид"
+
+#: .\info\templates\index.html:541
+msgid "Biz kimik?"
+msgstr "Кто мы?"
+
+#: .\info\templates\index.html:544
+msgid ""
+"'KaspianNavTel' şirkəti 2007-ci ildə yaradılmışdır. Azərbaycan "
+"Respublikasının müfəssəl elektron xəritəsi əsasında GPS naviqasiya "
+"sistemini, avtomonitorinq və peyk nəzarət sistemlərini ölkəmizdə tətbiq edən "
+"ilk yerli və milli şirkətdir. Şirkətimiz, geniş texnologiya və innovasiya "
+"sahələrində yüksək keyfiyyətli həllər təqdim edən aparıcı bir texnologiya "
+"şirkətidir. GPS naviqasiya cihazlarının satışı və montajından başlayaraq "
+"peyk, aero və dron xidmətlərinə qədər, coğrafi informasiya sistemləri (CİS) "
+"və xəritələşdirmə üzrə geodeziya, topoqrafiya, naviqasiya və batimetriya "
+"işlərini icra edirik. Bununla yanaşı, ağıllı həllər və rəqəmsal əkizlər, "
+"SCADA sistemləri və SCADA/CİS inteqrasiyası sahəsində fəaliyyət göstərərək "
+"müxtəlif sektorların rəqəmsal transformasiyasına dəstək oluruq. Süni "
+"intellekt və maşın öyrənməsi sahəsində qabaqcıl həllər təqdim edir, "
+"kibertəhlükəsizlik, robototexnika və avtomatlaşdırma ilə müştərilərimizin "
+"işlərini daha təhlükəsiz və səmərəli hala gətiririk. Şirkətimiz həmçinin "
+"artırılmış reallıq tətbiqləri, mobil tətbiqlər və informasiya portallarının "
+"yaradılması üzrə də ixtisaslaşmışdır. Plastik qabartma xəritələr, ərazi "
+"maketləri və dəniz-naviqasiya xəritələrinin hazırlanması sahəsində də "
+"innovativ həllər təqdim edirik. Geofizika və geologiya-kəşfiyyat işlərimizlə "
+"yanaşı, peşəkar təlimlər və texniki xidmətlə müştərilərimizə hərtərəfli "
+"dəstək təmin edirik."
+msgstr ""
+"'KaspianNavTel' компания была основана в 2007 году. Это первая местная и "
+"национальная компания, которая внедрила GPS-навигационные системы, системы "
+"автомониторинга и спутникового контроля в нашей стране, основанные на "
+"детализированной электронной карте Азербайджана. Наша компания является "
+"ведущей технологической компанией, предоставляющей высококачественные "
+"решения в области технологий и инноваций. Мы занимаемся продажей и "
+"установкой GPS-навигаторов, спутниковыми, авиационными и дроновыми услугами, "
+"географическими информационными системами (ГИС) и картографированием в "
+"области геодезии, топографии, навигации и батиметрии. Кроме того, мы "
+"поддерживаем цифровую трансформацию различных секторов, работая в области "
+"умных решений, цифровых двойников, SCADA систем и интеграции SCADA/ГИС. Мы "
+"предоставляем передовые решения в области искусственного интеллекта и "
+"машинного обучения, а также улучшая безопасность и эффективность работы "
+"наших клиентов с помощью кибербезопасности, робототехники и автоматизации. "
+"Наша компания также специализируется на создании приложений дополненной "
+"реальности, мобильных приложений и информационных порталов. Мы предоставляем "
+"инновационные решения и в области создания пластиковых рельефных карт, "
+"макетов территорий и морских навигационных карт. В дополнение к "
+"геофизическим и геолого-разведочным работам, мы также предоставляем нашим "
+"клиентам комплексную поддержку в виде профессионального обучения и "
+"технического обслуживания."
+
+#: .\info\templates\index.html:554
+msgid "Misiyamız"
+msgstr "Наша миссия"
+
+#: .\info\templates\index.html:556
+msgid ""
+"Müştərilərimizə münasib qiymətə ən son texnologiya və müasir həllər ilə "
+"yüksək keyfiyyətli GPS naviqasiya, avtomonitorinq və peyk nəzarət "
+"sistemləri, xəritəçəkmə, informasiya və avtomatlaşdırma xidmətləri təqdim "
+"edərək onların əməliyyatlarını daha təhlükəsiz, effektiv və rəqəmsal idarə "
+"olunmasına dəstək olmaq."
+msgstr ""
+"Предоставление нашим клиентам высококачественных услуг GPS-навигации, "
+"автомониторинга и спутникового контроля, картографии, информационных и "
+"автоматизационных решений по доступным ценам, поддерживая их операционные "
+"процессы для повышения безопасности, эффективности и цифрового управления."
+
+#: .\info\templates\index.html:563
+msgid "Vizyonumuz"
+msgstr "Наше видение"
+
+#: .\info\templates\index.html:565
+msgid ""
+"Milli və beynəlxalq miqyasda etibarlı bir həll təminatçısı olaraq, coğrafi "
+"informasiya texnologiyalarından süni intellektə qədər geniş bir xidmət "
+"çeşidi ilə qabaqcıl texnologiya və innovasiyanı tətbiq edən lider bir şirkət "
+"olmaq."
+msgstr ""
+"Стать лидирующей компанией, предоставляющей передовые технологии и "
+"инновации, применяя широкий спектр услуг от геоинформационных технологий до "
+"искусственного интеллекта, и обеспечивать надежные решения на национальном и "
+"международном уровне."
+
+#: .\info\templates\index.html:588
+msgid "Qoşulmuş cihaz"
+msgstr "Aктивные устройства"
+
+#: .\info\templates\index.html:596
+msgid "Layihələr"
+msgstr "Проекты"
+
+#: .\info\templates\index.html:604
+msgid "Müştərilər"
+msgstr "Клиенты"
+
+#: .\info\templates\index.html:612
+msgid "İşçi heyəti"
+msgstr "Команда"
+
+#: .\info\templates\index.html:622
+msgid "Partnyorlar"
+msgstr "Партнеры"
+
+#: .\info\templates\index.html:676
+msgid "Xidmətlərimiz"
+msgstr "Наши услуги"
+
+#: .\info\templates\index.html:711
+msgid "Hamısı"
+msgstr "Все"
+
+#: .\info\templates\index.html:712
+msgid "2G Avadanlıqlar"
+msgstr "Трекеры 2G"
+
+#: .\info\templates\index.html:713
+msgid "4G Avadanlıqlar"
+msgstr "Трекеры 4G"
+
+#: .\info\templates\index.html:714
+msgid "Sensorlar"
+msgstr "Датчики"
+
+#: .\info\templates\index.html:715
+msgid "Topoqrafiya Avadanlıqları"
+msgstr "Топографическое Oборудование"
+
+#: .\info\templates\index.html:746
+msgid "Tez-tez verilən suallar"
+msgstr "Часто задаваемые вопросы"
+
+#: .\info\templates\index.html:784
+msgid "Ünvan"
+msgstr "Адрес"
+
+#: .\info\templates\index.html:793
+msgid "Bizimlə Əlaqə"
+msgstr "Свяжитесь с нами"
+
+#: .\info\templates\index.html:801 .\info\templates\index.html:835
+msgid "E-Poçt"
+msgstr "Электронная почта"
+
+#: .\info\templates\index.html:830
+msgid "Adınız"
+msgstr "Ваше имя"
+
+#: .\info\templates\index.html:840
+msgid "Mövzu"
+msgstr "Тема"
+
+#: .\info\templates\index.html:845
+msgid "Mesajınız"
+msgstr "Ваше сообщение"
+
+#: .\info\templates\index.html:866
+msgid "Göndər"
+msgstr "Отправить"
+
+#: .\info\templates\index.html:893
+msgid "Telefon:"
+msgstr "Телефон:"
+
+#: .\info\templates\index.html:901
+msgid "Faydalı Bağlantılar"
+msgstr "Полезные ссылки"
+
+#: .\info\templates\index.html:903
+msgid "Ana səhifə"
+msgstr "Главная страница"
+
+#: .\info\templates\index.html:914
+msgid "Bizi Takib Edin"
+msgstr "Следите за нами"
+
+#: .\info\templates\index.html:927
+msgid "Taleh Qurbanov tərəfindən yaradılmışdır"
+msgstr "Создано Талехом Курбановым"
+
+#~ msgid "İşçi Heyəti"
+#~ msgstr "Команда"

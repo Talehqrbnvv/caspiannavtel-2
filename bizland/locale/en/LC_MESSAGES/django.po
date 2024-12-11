@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-11 16:27+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\info\templates\index.html:473 .\info\templates\service-detail.html:56
+msgid "Ana Səhifə"
+msgstr "Home"
+
+#: .\info\templates\index.html:474 .\info\templates\index.html:525
+#: .\info\templates\index.html:904
+msgid "Haqqımızda"
+msgstr "About"
+
+#: .\info\templates\index.html:475 .\info\templates\index.html:905
+msgid "Xidmətlər"
+msgstr "Services"
+
+#: .\info\templates\index.html:476 .\info\templates\index.html:704
+#: .\info\templates\index.html:906
+msgid "Avadanlıqlar"
+msgstr "Equipment"
+
+#: .\info\templates\index.html:477 .\info\templates\index.html:771
+#: .\info\templates\index.html:907
+msgid "Əlaqə"
+msgstr "Contact"
+
+#: .\info\templates\index.html:491
+msgid "GİRİŞ"
+msgstr "LOGIN"
+
+#: .\info\templates\index.html:512
+msgid "İgid-bələdçi"
+msgstr "Igid-guide"
+
+#: .\info\templates\index.html:541
+msgid "Biz kimik?"
+msgstr "Who are we?"
+
+#: .\info\templates\index.html:544
+msgid ""
+"'KaspianNavTel' şirkəti 2007-ci ildə yaradılmışdır. Azərbaycan "
+"Respublikasının müfəssəl elektron xəritəsi əsasında GPS naviqasiya "
+"sistemini, avtomonitorinq və peyk nəzarət sistemlərini ölkəmizdə tətbiq edən "
+"ilk yerli və milli şirkətdir. Şirkətimiz, geniş texnologiya və innovasiya "
+"sahələrində yüksək keyfiyyətli həllər təqdim edən aparıcı bir texnologiya "
+"şirkətidir. GPS naviqasiya cihazlarının satışı və montajından başlayaraq "
+"peyk, aero və dron xidmətlərinə qədər, coğrafi informasiya sistemləri (CİS) "
+"və xəritələşdirmə üzrə geodeziya, topoqrafiya, naviqasiya və batimetriya "
+"işlərini icra edirik. Bununla yanaşı, ağıllı həllər və rəqəmsal əkizlər, "
+"SCADA sistemləri və SCADA/CİS inteqrasiyası sahəsində fəaliyyət göstərərək "
+"müxtəlif sektorların rəqəmsal transformasiyasına dəstək oluruq. Süni "
+"intellekt və maşın öyrənməsi sahəsində qabaqcıl həllər təqdim edir, "
+"kibertəhlükəsizlik, robototexnika və avtomatlaşdırma ilə müştərilərimizin "
+"işlərini daha təhlükəsiz və səmərəli hala gətiririk. Şirkətimiz həmçinin "
+"artırılmış reallıq tətbiqləri, mobil tətbiqlər və informasiya portallarının "
+"yaradılması üzrə də ixtisaslaşmışdır. Plastik qabartma xəritələr, ərazi "
+"maketləri və dəniz-naviqasiya xəritələrinin hazırlanması sahəsində də "
+"innovativ həllər təqdim edirik. Geofizika və geologiya-kəşfiyyat işlərimizlə "
+"yanaşı, peşəkar təlimlər və texniki xidmətlə müştərilərimizə hərtərəfli "
+"dəstək təmin edirik."
+msgstr ""
+"'KaspianNavTel' company was founded in 2007. It is the first local and "
+"national company in our country to implement GPS navigation systems, vehicle "
+"monitoring, and satellite control systems based on the detailed electronic "
+"map of the Republic of Azerbaijan. Our company is a leading technology "
+"company offering high-quality solutions in various technology and innovation "
+"fields. Starting from the sale and installation of GPS navigation devices, "
+"we provide services ranging from satellite, aero, and drone services to "
+"geographic information systems (GIS) and geodesy, topography, navigation, "
+"and bathymetry works. Additionally, we support the digital transformation of "
+"various sectors through smart solutions, digital twins, SCADA systems, and "
+"SCADA/GIS integration. We provide advanced solutions in artificial "
+"intelligence and machine learning, enhancing our clients' operations through "
+"cybersecurity, robotics, and automation for safer and more efficient "
+"processes. Our company is also specialized in augmented reality "
+"applications, mobile apps, and the creation of information portals. We "
+"provide innovative solutions in the production of plastic embossed maps, "
+"area models, and marine navigation charts. Alongside geophysics and "
+"geological exploration, we offer comprehensive support to our clients with "
+"professional training and technical services."
+
+#: .\info\templates\index.html:554
+msgid "Misiyamız"
+msgstr "Our Mission"
+
+#: .\info\templates\index.html:556
+msgid ""
+"Müştərilərimizə münasib qiymətə ən son texnologiya və müasir həllər ilə "
+"yüksək keyfiyyətli GPS naviqasiya, avtomonitorinq və peyk nəzarət "
+"sistemləri, xəritəçəkmə, informasiya və avtomatlaşdırma xidmətləri təqdim "
+"edərək onların əməliyyatlarını daha təhlükəsiz, effektiv və rəqəmsal idarə "
+"olunmasına dəstək olmaq."
+msgstr ""
+"By providing our customers with the latest technology and modern solutions "
+"at affordable prices, we offer high-quality GPS navigation, vehicle "
+"monitoring, satellite control systems, mapping, information, and automation "
+"services, supporting the safe, efficient, and digital management of their "
+"operations."
+
+#: .\info\templates\index.html:563
+msgid "Vizyonumuz"
+msgstr "Our Vision"
+
+#: .\info\templates\index.html:565
+msgid ""
+"Milli və beynəlxalq miqyasda etibarlı bir həll təminatçısı olaraq, coğrafi "
+"informasiya texnologiyalarından süni intellektə qədər geniş bir xidmət "
+"çeşidi ilə qabaqcıl texnologiya və innovasiyanı tətbiq edən lider bir şirkət "
+"olmaq."
+msgstr ""
+"As a reliable solution provider on a national and international scale, to be "
+"a leading company applying advanced technology and innovation with a wide "
+"range of services, from geographic information technologies to artificial "
+"intelligence."
+
+#: .\info\templates\index.html:588
+msgid "Qoşulmuş cihaz"
+msgstr "Connected device"
+
+#: .\info\templates\index.html:596
+msgid "Layihələr"
+msgstr "Projects"
+
+#: .\info\templates\index.html:604
+msgid "Müştərilər"
+msgstr "Customers"
+
+#: .\info\templates\index.html:612
+msgid "İşçi heyəti"
+msgstr "Staff member"
+
+#: .\info\templates\index.html:622
+msgid "Partnyorlar"
+msgstr "Partners"
+
+#: .\info\templates\index.html:676
+msgid "Xidmətlərimiz"
+msgstr "Our Services"
+
+#: .\info\templates\index.html:711
+msgid "Hamısı"
+msgstr "All"
+
+#: .\info\templates\index.html:712
+msgid "2G Avadanlıqlar"
+msgstr "2G Equipment"
+
+#: .\info\templates\index.html:713
+msgid "4G Avadanlıqlar"
+msgstr "4G Equipment"
+
+#: .\info\templates\index.html:714
+msgid "Sensorlar"
+msgstr "Sensors"
+
+#: .\info\templates\index.html:715
+msgid "Topoqrafiya Avadanlıqları"
+msgstr "Topography Equipment"
+
+#: .\info\templates\index.html:746
+msgid "Tez-tez verilən suallar"
+msgstr "Frequently asked questions"
+
+#: .\info\templates\index.html:784
+msgid "Ünvan"
+msgstr "Address"
+
+#: .\info\templates\index.html:793
+msgid "Bizimlə Əlaqə"
+msgstr "Contact Us"
+
+#: .\info\templates\index.html:801 .\info\templates\index.html:835
+msgid "E-Poçt"
+msgstr "Email"
+
+#: .\info\templates\index.html:830
+msgid "Adınız"
+msgstr "Your Name"
+
+#: .\info\templates\index.html:840
+msgid "Mövzu"
+msgstr "Subject"
+
+#: .\info\templates\index.html:845
+msgid "Mesajınız"
+msgstr "Your Message"
+
+#: .\info\templates\index.html:866
+msgid "Göndər"
+msgstr "Send"
+
+#: .\info\templates\index.html:893
+msgid "Telefon:"
+msgstr "Phone:"
+
+#: .\info\templates\index.html:901
+msgid "Faydalı Bağlantılar"
+msgstr "Useful Links"
+
+#: .\info\templates\index.html:903
+msgid "Ana səhifə"
+msgstr "Home"
+
+#: .\info\templates\index.html:914
+msgid "Bizi Takib Edin"
+msgstr "Follow us"
+
+#: .\info\templates\index.html:927
+msgid "Taleh Qurbanov tərəfindən yaradılmışdır"
+msgstr "Developed by Taleh Qurbanov"
+
+#~ msgid "İşçi Heyəti"
+#~ msgstr "Staff"
