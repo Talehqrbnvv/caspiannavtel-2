@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+ef2*9g7ica$=7wpy(625&mp0j@9q#sng7)+867iiei$gpge%h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.caspiannavtel.az', 'www-new.caspiannavtel.az']
 
 
 # Application definition
@@ -156,3 +156,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://www.caspiannavtel.az',
+    'https://www-new.caspiannavtel.az',
+]

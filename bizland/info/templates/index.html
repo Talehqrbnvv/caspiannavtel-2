@@ -348,29 +348,30 @@ h4.text-center {
 
 
 
+@media (max-width: 1200px) {
+  h1 {
+    top: 150px;
+    left: 300px;
+  }
+}
 
-
-/* Mobil cihazlar için yazıyı uyarlamak */
+/* Tablet ekranları için */
 @media (max-width: 768px) {
-  #hero-photo h1 {
-    font-size: 24px;  /* Yazıyı mobilde daha küçük yap */
-    top: 100px; /* Üstten mesafeyi küçült */
-    left: 20px; /* Sol mesafeyi küçült */
-    text-align: center; /* Yazıyı ortala */
-    width: 100%;  /* Yazının genişliğini ayarla */
-    position: absolute; /* Yazıyı pozisyonla */
+  h1 {
+    top: 100px;
+    left: 150px;
+    font-size: 1.5rem;
   }
 }
 
-/* Yazının büyük ekranlarda daha iyi görünmesi için ek ayarlar */
-@media (min-width: 769px) {
-  #hero-photo h1 {
-    font-size: 40px; /* Daha büyük yazı boyutu */
-    top: 170px;
-    left: 500px; /* Geniş ekranda sola doğru hizalama */
+/* Mobil ekranlar için */
+@media (max-width: 480px) {
+  h1 {
+    top: 80px;
+    left: 50px;
+    font-size: 1.2rem;
   }
-}
-
+} 
 
 
 
@@ -508,9 +509,6 @@ h4.text-center {
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
             <div class="hero-photo" id="hero-photo" style="position: relative;">
               <img src="{% static 'assets/img/logo.png' %}" alt="Logo" style="width: 100%; height: auto;">
-              <h1 style="margin: 0; white-space: nowrap; color: blue; position: absolute; top: 170px; left: 500px;">
-                {% trans "İgid-bələdçi" %}
-              </h1>
             </div>
                  
           </div>
@@ -535,16 +533,23 @@ h4.text-center {
 
        
 
-          <div class="d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="about-content ps-0 ps-lg-3">
-              <h3 style="color: blue; text-align: center; margin: 20px 0;">
+          <div class="d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+            
+            <div class="about-content ps-0 ps-lg-3" style="width: 100%; max-width: 800px; margin-left: 13px;">
+              <h3 style="color: blue; text-align: center;">
                 {% trans "Biz kimik?" %}
               </h3>
               <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: 500; line-height: 1.6; letter-spacing: 0.5px;">
                 {% trans "'KaspianNavTel' şirkəti 2007-ci ildə yaradılmışdır. Azərbaycan Respublikasının müfəssəl elektron xəritəsi əsasında GPS naviqasiya sistemini, avtomonitorinq və peyk nəzarət sistemlərini ölkəmizdə tətbiq edən ilk yerli və milli şirkətdir. Şirkətimiz, geniş texnologiya və innovasiya sahələrində yüksək keyfiyyətli həllər təqdim edən aparıcı bir texnologiya şirkətidir. GPS naviqasiya cihazlarının satışı və montajından başlayaraq peyk, aero və dron xidmətlərinə qədər, coğrafi informasiya sistemləri (CİS) və xəritələşdirmə üzrə geodeziya, topoqrafiya, naviqasiya və batimetriya işlərini icra edirik. Bununla yanaşı, ağıllı həllər və rəqəmsal əkizlər, SCADA sistemləri və SCADA/CİS inteqrasiyası sahəsində fəaliyyət göstərərək müxtəlif sektorların rəqəmsal transformasiyasına dəstək oluruq. Süni intellekt və maşın öyrənməsi sahəsində qabaqcıl həllər təqdim edir, kibertəhlükəsizlik, robototexnika və avtomatlaşdırma ilə müştərilərimizin işlərini daha təhlükəsiz və səmərəli hala gətiririk. Şirkətimiz həmçinin artırılmış reallıq tətbiqləri, mobil tətbiqlər və informasiya portallarının yaradılması üzrə də ixtisaslaşmışdır. Plastik qabartma xəritələr, ərazi maketləri və dəniz-naviqasiya xəritələrinin hazırlanması sahəsində də innovativ həllər təqdim edirik. Geofizika və geologiya-kəşfiyyat işlərimizlə yanaşı, peşəkar təlimlər və texniki xidmətlə müştərilərimizə hərtərəfli dəstək təmin edirik." %}
               </p>
             </div>
-            
+            <!-- Şəkil Bölməsi -->
+            <div class="image-container" style="width: 100%; max-width: 600px; margin-left: 20px;">
+              <img src="{% static 'assets/img/about.jpg' %}" alt="About Image" class="img-fluid" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </div>
+          
+            <!-- Mətn Bölməsi -->
+          
           </div>
          <ul class="custom-ul row list-unstyled"style="margin-left: 15px;">
   <li class="col-md-6 mb-4">
@@ -577,7 +582,7 @@ h4.text-center {
     <!-- Stats Section -->
     <section id="stats" class="stats section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100" style="margin-left: 12px;">
 
         <div class="row gy-4">
 
@@ -677,7 +682,7 @@ h4.text-center {
       </div>
   
       <div class="container">
-        <div class="row gy-4">
+        <div class="row gy-4"style="margin-left: 3px;">
             {% for service in services %}
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-item position-relative">
@@ -745,7 +750,7 @@ h4.text-center {
       <div class="container section-title">
           <h2>{% trans "Tez-tez verilən suallar" %}</h2>
       </div>
-      <div class="container">
+      <div class="container" style="margin-left: 10px;">
           <div class="row justify-content-center">
               <div class="col-lg-10">
                   <div class="faq-container">

@@ -838,11 +838,7 @@ section,
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
+
 
   .hero p {
     font-size: 18px;
@@ -854,7 +850,7 @@ section,
   .hero .btn-watch-video {
     font-size: 13px;
   }
-}
+
 
 @keyframes up-down {
   0% {
