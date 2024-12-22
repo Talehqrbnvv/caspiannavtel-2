@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 16:27+0400\n"
+"POT-Creation-Date: 2024-12-22 20:26+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,42 +20,38 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\info\templates\index.html:473 .\info\templates\service-detail.html:56
+#: .\info\templates\index.html:472 .\info\templates\service-detail.html:56
 msgid "Ana Səhifə"
 msgstr "Главная страница"
 
-#: .\info\templates\index.html:474 .\info\templates\index.html:525
-#: .\info\templates\index.html:904
+#: .\info\templates\index.html:473 .\info\templates\index.html:521
+#: .\info\templates\index.html:929
 msgid "Haqqımızda"
 msgstr "О нас"
 
-#: .\info\templates\index.html:475 .\info\templates\index.html:905
+#: .\info\templates\index.html:474 .\info\templates\index.html:930
 msgid "Xidmətlər"
 msgstr "Услуги"
 
-#: .\info\templates\index.html:476 .\info\templates\index.html:704
-#: .\info\templates\index.html:906
+#: .\info\templates\index.html:475 .\info\templates\index.html:707
+#: .\info\templates\index.html:931
 msgid "Avadanlıqlar"
 msgstr "Оборудование"
 
-#: .\info\templates\index.html:477 .\info\templates\index.html:771
-#: .\info\templates\index.html:907
+#: .\info\templates\index.html:476 .\info\templates\index.html:774
+#: .\info\templates\index.html:932
 msgid "Əlaqə"
 msgstr "Контакт"
 
-#: .\info\templates\index.html:491
+#: .\info\templates\index.html:490
 msgid "GİRİŞ"
 msgstr "ВХОД"
 
-#: .\info\templates\index.html:512
-msgid "İgid-bələdçi"
-msgstr "Игид-гид"
-
-#: .\info\templates\index.html:541
+#: .\info\templates\index.html:538
 msgid "Biz kimik?"
 msgstr "Кто мы?"
 
-#: .\info\templates\index.html:544
+#: .\info\templates\index.html:541
 msgid ""
 "'KaspianNavTel' şirkəti 2007-ci ildə yaradılmışdır. Azərbaycan "
 "Respublikasının müfəssəl elektron xəritəsi əsasında GPS naviqasiya "
@@ -100,11 +96,11 @@ msgstr ""
 "клиентам комплексную поддержку в виде профессионального обучения и "
 "технического обслуживания."
 
-#: .\info\templates\index.html:554
+#: .\info\templates\index.html:557
 msgid "Misiyamız"
 msgstr "Наша миссия"
 
-#: .\info\templates\index.html:556
+#: .\info\templates\index.html:559
 msgid ""
 "Müştərilərimizə münasib qiymətə ən son texnologiya və müasir həllər ilə "
 "yüksək keyfiyyətli GPS naviqasiya, avtomonitorinq və peyk nəzarət "
@@ -117,11 +113,11 @@ msgstr ""
 "автоматизационных решений по доступным ценам, поддерживая их операционные "
 "процессы для повышения безопасности, эффективности и цифрового управления."
 
-#: .\info\templates\index.html:563
+#: .\info\templates\index.html:566
 msgid "Vizyonumuz"
 msgstr "Наше видение"
 
-#: .\info\templates\index.html:565
+#: .\info\templates\index.html:568
 msgid ""
 "Milli və beynəlxalq miqyasda etibarlı bir həll təminatçısı olaraq, coğrafi "
 "informasiya texnologiyalarından süni intellektə qədər geniş bir xidmət "
@@ -133,101 +129,120 @@ msgstr ""
 "искусственного интеллекта, и обеспечивать надежные решения на национальном и "
 "международном уровне."
 
-#: .\info\templates\index.html:588
+#: .\info\templates\index.html:591
 msgid "Qoşulmuş cihaz"
 msgstr "Aктивные устройства"
 
-#: .\info\templates\index.html:596
+#: .\info\templates\index.html:599
 msgid "Layihələr"
 msgstr "Проекты"
 
-#: .\info\templates\index.html:604
+#: .\info\templates\index.html:607
 msgid "Müştərilər"
 msgstr "Клиенты"
 
-#: .\info\templates\index.html:612
+#: .\info\templates\index.html:615
 msgid "İşçi heyəti"
 msgstr "Команда"
 
-#: .\info\templates\index.html:622
+#: .\info\templates\index.html:625
 msgid "Partnyorlar"
 msgstr "Партнеры"
 
-#: .\info\templates\index.html:676
+#: .\info\templates\index.html:679
 msgid "Xidmətlərimiz"
 msgstr "Наши услуги"
 
-#: .\info\templates\index.html:711
+#: .\info\templates\index.html:714
 msgid "Hamısı"
 msgstr "Все"
 
-#: .\info\templates\index.html:712
+#: .\info\templates\index.html:715
 msgid "2G Avadanlıqlar"
 msgstr "Трекеры 2G"
 
-#: .\info\templates\index.html:713
+#: .\info\templates\index.html:716
 msgid "4G Avadanlıqlar"
 msgstr "Трекеры 4G"
 
-#: .\info\templates\index.html:714
+#: .\info\templates\index.html:717
 msgid "Sensorlar"
 msgstr "Датчики"
 
-#: .\info\templates\index.html:715
+#: .\info\templates\index.html:718
 msgid "Topoqrafiya Avadanlıqları"
 msgstr "Топографическое Oборудование"
 
-#: .\info\templates\index.html:746
+#: .\info\templates\index.html:749
 msgid "Tez-tez verilən suallar"
 msgstr "Часто задаваемые вопросы"
 
-#: .\info\templates\index.html:784
+#: .\info\templates\index.html:787
 msgid "Ünvan"
 msgstr "Адрес"
 
-#: .\info\templates\index.html:793
+#: .\info\templates\index.html:796
 msgid "Bizimlə Əlaqə"
 msgstr "Свяжитесь с нами"
 
-#: .\info\templates\index.html:801 .\info\templates\index.html:835
+#: .\info\templates\index.html:804 .\info\templates\index.html:860
 msgid "E-Poçt"
 msgstr "Электронная почта"
 
-#: .\info\templates\index.html:830
+#: .\info\templates\index.html:819
+msgid "Mövqeyi Açmaq Üçün Uyğun Bağlantını Seçin:"
+msgstr "Выберите подходящую ссылку, чтобы открыть местоположение:"
+
+#: .\info\templates\index.html:823
+msgid "Bu mövqeyi Google Maps ilə aç"
+msgstr "Откройте это местоположение в Google Maps"
+
+#: .\info\templates\index.html:829
+msgid "Bu mövqeyi Apple Maps ilə aç (iOS)"
+msgstr "Откройте это местоположение в Apple Maps (iOS)"
+
+#: .\info\templates\index.html:835
+msgid "Bu mövqeyi Waze ilə aç (Android)"
+msgstr "Откройте это местоположение в Waze (Android)"
+
+#: .\info\templates\index.html:855
 msgid "Adınız"
 msgstr "Ваше имя"
 
-#: .\info\templates\index.html:840
+#: .\info\templates\index.html:865
 msgid "Mövzu"
 msgstr "Тема"
 
-#: .\info\templates\index.html:845
+#: .\info\templates\index.html:870
 msgid "Mesajınız"
 msgstr "Ваше сообщение"
 
-#: .\info\templates\index.html:866
+#: .\info\templates\index.html:891
 msgid "Göndər"
 msgstr "Отправить"
 
-#: .\info\templates\index.html:893
+#: .\info\templates\index.html:918
 msgid "Telefon:"
 msgstr "Телефон:"
 
-#: .\info\templates\index.html:901
+#: .\info\templates\index.html:926
 msgid "Faydalı Bağlantılar"
 msgstr "Полезные ссылки"
 
-#: .\info\templates\index.html:903
+#: .\info\templates\index.html:928
 msgid "Ana səhifə"
 msgstr "Главная страница"
 
-#: .\info\templates\index.html:914
+#: .\info\templates\index.html:939
 msgid "Bizi Takib Edin"
 msgstr "Следите за нами"
 
-#: .\info\templates\index.html:927
+#: .\info\templates\index.html:952
 msgid "Taleh Qurbanov tərəfindən yaradılmışdır"
 msgstr "Создано Талехом Курбановым"
+
+#~ msgid "İgid-bələdçi"
+#~ msgstr "Игид-гид"
 
 #~ msgid "İşçi Heyəti"
 #~ msgstr "Команда"

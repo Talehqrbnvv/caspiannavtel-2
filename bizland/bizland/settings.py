@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+ef2*9g7ica$=7wpy(625&mp0j@9q#sng7)+867iiei$gpge%h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.caspiannavtel.az', 'www-new.caspiannavtel.az']
+ALLOWED_HOSTS = ['www.caspiannavtel.az','https://caspiannavtel.az','caspiannavtel.az','https://www.caspiannavtel.az']
 
 
 # Application definition
@@ -101,7 +101,7 @@ DATABASES = {
         'NAME': 'bizland_db',
         'USER': 'postgres',
         'PASSWORD': 'Taleh2001',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
@@ -156,7 +156,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://www.caspiannavtel.az',
-    'https://www-new.caspiannavtel.az',
-]
+

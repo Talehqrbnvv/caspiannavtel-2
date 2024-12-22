@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 16:27+0400\n"
+"POT-Creation-Date: 2024-12-22 20:26+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,42 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\info\templates\index.html:473 .\info\templates\service-detail.html:56
+#: .\info\templates\index.html:472 .\info\templates\service-detail.html:56
 msgid "Ana Səhifə"
 msgstr "Ana Səhifə"
 
-#: .\info\templates\index.html:474 .\info\templates\index.html:525
-#: .\info\templates\index.html:904
+#: .\info\templates\index.html:473 .\info\templates\index.html:521
+#: .\info\templates\index.html:929
 msgid "Haqqımızda"
 msgstr "Haqqımızda"
 
-#: .\info\templates\index.html:475 .\info\templates\index.html:905
+#: .\info\templates\index.html:474 .\info\templates\index.html:930
 msgid "Xidmətlər"
 msgstr "Xidmətlər"
 
-#: .\info\templates\index.html:476 .\info\templates\index.html:704
-#: .\info\templates\index.html:906
+#: .\info\templates\index.html:475 .\info\templates\index.html:707
+#: .\info\templates\index.html:931
 msgid "Avadanlıqlar"
 msgstr "Avadanlıqlar"
 
-#: .\info\templates\index.html:477 .\info\templates\index.html:771
-#: .\info\templates\index.html:907
+#: .\info\templates\index.html:476 .\info\templates\index.html:774
+#: .\info\templates\index.html:932
 msgid "Əlaqə"
 msgstr "Əlaqə"
 
-#: .\info\templates\index.html:491
+#: .\info\templates\index.html:490
 msgid "GİRİŞ"
 msgstr "GİRİŞ"
 
-#: .\info\templates\index.html:512
-msgid "İgid-bələdçi"
-msgstr "İgid-bələdçi"
-
-#: .\info\templates\index.html:541
+#: .\info\templates\index.html:538
 msgid "Biz kimik?"
 msgstr "Biz kimik?"
 
-#: .\info\templates\index.html:544
+#: .\info\templates\index.html:541
 msgid ""
 "'KaspianNavTel' şirkəti 2007-ci ildə yaradılmışdır. Azərbaycan "
 "Respublikasının müfəssəl elektron xəritəsi əsasında GPS naviqasiya "
@@ -97,11 +93,11 @@ msgstr ""
 "yanaşı, peşəkar təlimlər və texniki xidmətlə müştərilərimizə hərtərəfli "
 "dəstək təmin edirik."
 
-#: .\info\templates\index.html:554
+#: .\info\templates\index.html:557
 msgid "Misiyamız"
 msgstr "Misiyamız"
 
-#: .\info\templates\index.html:556
+#: .\info\templates\index.html:559
 msgid ""
 "Müştərilərimizə münasib qiymətə ən son texnologiya və müasir həllər ilə "
 "yüksək keyfiyyətli GPS naviqasiya, avtomonitorinq və peyk nəzarət "
@@ -115,11 +111,11 @@ msgstr ""
 "edərək onların əməliyyatlarını daha təhlükəsiz, effektiv və rəqəmsal idarə "
 "olunmasına dəstək olmaq."
 
-#: .\info\templates\index.html:563
+#: .\info\templates\index.html:566
 msgid "Vizyonumuz"
 msgstr "Vizyonumuz"
 
-#: .\info\templates\index.html:565
+#: .\info\templates\index.html:568
 msgid ""
 "Milli və beynəlxalq miqyasda etibarlı bir həll təminatçısı olaraq, coğrafi "
 "informasiya texnologiyalarından süni intellektə qədər geniş bir xidmət "
@@ -131,101 +127,120 @@ msgstr ""
 "çeşidi ilə qabaqcıl texnologiya və innovasiyanı tətbiq edən lider bir şirkət "
 "olmaq."
 
-#: .\info\templates\index.html:588
+#: .\info\templates\index.html:591
 msgid "Qoşulmuş cihaz"
 msgstr "Qoşulmuş cihaz"
 
-#: .\info\templates\index.html:596
+#: .\info\templates\index.html:599
 msgid "Layihələr"
 msgstr "Layihələr"
 
-#: .\info\templates\index.html:604
+#: .\info\templates\index.html:607
 msgid "Müştərilər"
 msgstr "Müştərilər"
 
-#: .\info\templates\index.html:612
+#: .\info\templates\index.html:615
 msgid "İşçi heyəti"
 msgstr "İşçi heyəti"
 
-#: .\info\templates\index.html:622
+#: .\info\templates\index.html:625
 msgid "Partnyorlar"
 msgstr "Partnyorlar"
 
-#: .\info\templates\index.html:676
+#: .\info\templates\index.html:679
 msgid "Xidmətlərimiz"
 msgstr "Xidmətlərimiz"
 
-#: .\info\templates\index.html:711
+#: .\info\templates\index.html:714
 msgid "Hamısı"
 msgstr "Hamısı"
 
-#: .\info\templates\index.html:712
+#: .\info\templates\index.html:715
 msgid "2G Avadanlıqlar"
 msgstr "2G Avadanlıqlar"
 
-#: .\info\templates\index.html:713
+#: .\info\templates\index.html:716
 msgid "4G Avadanlıqlar"
 msgstr "4G Avadanlıqlar"
 
-#: .\info\templates\index.html:714
+#: .\info\templates\index.html:717
 msgid "Sensorlar"
 msgstr "Sensorlar"
 
-#: .\info\templates\index.html:715
+#: .\info\templates\index.html:718
 msgid "Topoqrafiya Avadanlıqları"
 msgstr "Topoqrafiya Avadanlıqları"
 
-#: .\info\templates\index.html:746
+#: .\info\templates\index.html:749
 msgid "Tez-tez verilən suallar"
 msgstr "Tez-tez verilən suallar"
 
-#: .\info\templates\index.html:784
+#: .\info\templates\index.html:787
 msgid "Ünvan"
 msgstr "Ünvan"
 
-#: .\info\templates\index.html:793
+#: .\info\templates\index.html:796
 msgid "Bizimlə Əlaqə"
 msgstr "Bizimlə Əlaqə"
 
-#: .\info\templates\index.html:801 .\info\templates\index.html:835
+#: .\info\templates\index.html:804 .\info\templates\index.html:860
 msgid "E-Poçt"
 msgstr "E-Poçt"
 
-#: .\info\templates\index.html:830
+#: .\info\templates\index.html:819
+msgid "Mövqeyi Açmaq Üçün Uyğun Bağlantını Seçin:"
+msgstr "Mövqeyi Açmaq Üçün Uyğun Bağlantını Seçin:"
+
+#: .\info\templates\index.html:823
+msgid "Bu mövqeyi Google Maps ilə aç"
+msgstr "Bu mövqeyi Google Maps ilə aç"
+
+#: .\info\templates\index.html:829
+msgid "Bu mövqeyi Apple Maps ilə aç (iOS)"
+msgstr "Bu mövqeyi Apple Maps ilə aç (iOS)"
+
+#: .\info\templates\index.html:835
+msgid "Bu mövqeyi Waze ilə aç (Android)"
+msgstr "Bu mövqeyi Waze ilə aç (Android)"
+
+#: .\info\templates\index.html:855
 msgid "Adınız"
 msgstr "Adınız"
 
-#: .\info\templates\index.html:840
+#: .\info\templates\index.html:865
 msgid "Mövzu"
 msgstr "Mövzu"
 
-#: .\info\templates\index.html:845
+#: .\info\templates\index.html:870
 msgid "Mesajınız"
 msgstr "Mesajınız"
 
-#: .\info\templates\index.html:866
+#: .\info\templates\index.html:891
 msgid "Göndər"
 msgstr "Göndər"
 
-#: .\info\templates\index.html:893
+#: .\info\templates\index.html:918
 msgid "Telefon:"
 msgstr "Telefon:"
 
-#: .\info\templates\index.html:901
+#: .\info\templates\index.html:926
 msgid "Faydalı Bağlantılar"
 msgstr "Faydalı Bağlantılar"
 
-#: .\info\templates\index.html:903
+#: .\info\templates\index.html:928
 msgid "Ana səhifə"
 msgstr "Ana səhifə"
 
-#: .\info\templates\index.html:914
+#: .\info\templates\index.html:939
 msgid "Bizi Takib Edin"
 msgstr "Bizi Takib Edin"
 
-#: .\info\templates\index.html:927
+#: .\info\templates\index.html:952
 msgid "Taleh Qurbanov tərəfindən yaradılmışdır"
 msgstr "Taleh Qurbanov tərəfindən yaradılmışdır"
+
+#~ msgid "İgid-bələdçi"
+#~ msgstr "İgid-bələdçi"
 
 #~ msgid "İşçi Heyəti"
 #~ msgstr "İşçi Heyəti"

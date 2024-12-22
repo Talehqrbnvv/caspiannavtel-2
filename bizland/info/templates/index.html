@@ -6,14 +6,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - BizLand Bootstrap Template</title>
+  <title>Caspiannavtel</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -80,7 +78,7 @@
   }
 
 
-  #language-form {
+#language-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,6 +392,20 @@ h4.text-center {
     <img src="{% static 'assets/img/logo.png' %}" alt="Logo" class="loading-logo">
 </div>
 
+<script>
+  function openMap() {
+      const latitude = 40.422373;
+      const longitude = 49.877619;
+
+      if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
+          window.location.href = maps://?q=${latitude},${longitude};
+      } else if (navigator.userAgent.match(/Android/i)) {
+          window.location.href = geo:${latitude},${longitude};
+      } else {
+          window.location.href = https://www.google.com/maps?q=${latitude},${longitude};
+      }
+  }
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -589,7 +601,7 @@ h4.text-center {
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-car-front-fill"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="8000" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="8104" data-purecounter-duration="1" class="purecounter"></span>
               <p>{% trans "Qoşulmuş cihaz" %}</p>
             </div>
           </div><!-- End Stats Item -->
@@ -597,7 +609,7 @@ h4.text-center {
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-journal-richtext"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="198" data-purecounter-duration="1" class="purecounter"></span>
               <p>{% trans "Layihələr" %}</p>
             </div>
           </div><!-- End Stats Item -->
@@ -605,7 +617,7 @@ h4.text-center {
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-file-earmark-check"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="350" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="348" data-purecounter-duration="1" class="purecounter"></span>
               <p>{% trans "Müştərilər" %}</p>
             </div>
           </div>
@@ -613,7 +625,7 @@ h4.text-center {
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-people"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="38" data-purecounter-duration="1" class="purecounter"></span>
               <p>{% trans "İşçi heyəti" %}</p>
             </div>
           </div><!-- End Stats Item -->
@@ -816,6 +828,7 @@ h4.text-center {
               allowfullscreen
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBw448XyidF5g1P-IGTyskJTV2B2-TTVyI&q=40.422365,49.8775895">
             </iframe>
+          <div class="map-overlay" onclick="openMap()"></div>
                       </div>
           </div>
 
